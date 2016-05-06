@@ -136,10 +136,10 @@ class WalmartSpider(Spider):
             l.add_value('walmart_price', price.replace(" ", ''))
 
         if upc:
-            region = "com"
-            public_key = "AKIAJCAIVLPWYX553QKA"
-            private_key = "VNCDZ5l0IEUqJIrr/0wuh1Cyj+ZxfbA/42d3Cu/a"
-            associate_tag = "esfera01-20"
+            region = REGION
+            public_key = AWS_ACCESS_KEY_ID
+            private_key = AWS_ACCESS_SECRET_KEY
+            associate_tag = ASSOCIATE_TAG
 
             params = {
                 "AWSAccessKeyId": public_key,
